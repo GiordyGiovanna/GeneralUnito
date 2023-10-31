@@ -195,6 +195,10 @@ public class Lexer {
                     }
 	                return new NumberTok(256, number);
                 } 
+                else if(peek == '_'){
+                    peek = ' ';
+                    return lexical_scan(br);
+                }
                 else 
                 {
                     System.err.println("Erroneous character: " + peek );
